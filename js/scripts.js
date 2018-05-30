@@ -34,4 +34,43 @@ $(document).ready(function() {
     $("ul#webpage").children("li").first().click(function() {
       $(this).remove();
     });
+
+    $(".cat").click(function() {
+      $("ul#cat").prepend("<li>Meow!</li>");
+      $("ul#dog").prepend("<li>Woof!</li>");
+
+      $("ul#cat").children("li").first().click(function() {
+        $(this).remove();
+      });
+      $("ul#dog").children("li").first().click(function() {
+        $(this).remove();
+      });
+    });
+
+    $(".dog").click(function() {
+      $("ul#dog").prepend("<li>Woof!</li>");
+      $("ul#cat").prepend("<li>Meow!</li>");
+
+      $("ul#cat").children("li").first().click(function() {
+        $(this).remove();
+      });
+      $("ul#dog").children("li").first().click(function() {
+        $(this).remove();
+      });
+    });
+
+    $("button#cat-img").click(function() {
+      $("#catimage").after('<img src="img/cat.jpeg" alt="image of cat">');
+      $("img").click(function() {
+        $(this).remove();
+      });
+    });
+
+    $("button#dog-img").click(function() {
+      $("#dogimage").after('<img src="img/dog.jpg" alt="image of dog">');
+      $("img").click(function() {
+        $(this).remove();
+      });
+    });
+
 });
